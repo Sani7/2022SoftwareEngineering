@@ -25,3 +25,9 @@ if it can't connect to the server it will give an error on the screen
 ```Can't connect to server [IP]:[PORT]/[URI]```
 * If the URI is faulty it will display:\
 ```Server returned an error while accessing [URI]```
+
+## Epaper Library
+The library contains 3 sub libraries:\
+* First layer: The Hardware library i.e. How to acces the microcontrollers spi interface, initializing the pins, etc.
+* Middle layer: The commands for the specific display i.e. initializing, displaying pixels, etc.
+* Top layer: The draw functions that are used to display more elaborate things then pixels ex. Lines, text, images
