@@ -1,8 +1,17 @@
 # Documentation
+
+## Build tool espidf
+get into env            ```get_idf```\
+set target (set board)  ```ìdf.py set-target esp32```\
+make project            ```idf.py create-project```
+build project           ```ìdf.py build```\
+flash project           ```ìdf.py -p /dev/ttyUSBX flash```\
+monitor / debug port    ```ìdf.py monitor -p /dev/ttyUSBX```\
+
 ## Config File
+
 How it is constructed:
 [ConfigName]=[Input]'\n'\
-And consists of:
 * SSID      => Wifi SSID
 * PSWD      => Wifi Pasword
 * IP        => Server IP
