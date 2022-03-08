@@ -40,3 +40,6 @@ The library contains 3 sub libraries:\
 * First layer: The Hardware library i.e. How to acces the microcontrollers spi interface, initializing the pins, etc.
 * Middle layer: The commands for the specific display i.e. initializing, displaying pixels, etc.
 * Top layer: The draw functions that are used to display more elaborate things then pixels ex. Lines, text, images
+
+
+## HTTPS GET/POST library
