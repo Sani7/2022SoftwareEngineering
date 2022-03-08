@@ -1,4 +1,3 @@
-set(EXTRA_COMPONENT_DIRS src include lib)
 set(srcs "epdif.c" "epdpaint.cpp" "font8.c" "font12.c" "font16.c" "font20.c" "font24.c")
 
 if(CONFIG_EPD_1_54_V2)
