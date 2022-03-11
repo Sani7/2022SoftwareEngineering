@@ -28,6 +28,25 @@ start_up ________________________________________________________\_\_\_\_ get da
         &emsp;&emsp;&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_<\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\
         &emsp;&emsp;&emsp;wifi error&emsp;&emsp;server not found&emsp;&emsp;&emsp;&emsp;bad uri&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Or 5 minutes past
 
+## Function List
+* Draw a graph on the display
+    * Draw y and x axis with information about what is on the axis
+    * Draw Title
+    * Draw Draw data
+* Get Data from PHP server
+    * Send request with mode (day, week, month, year)
+    * Receive data
+    * Convert data to int and store in array
+* Mode select via rotary encoder
+    * Read rotary encoder via interrupt
+    * change data accordingly
+* Read config from sd card
+    * Mount sd card to file system
+    * use stdio functions for reading data
+    * convert lines to config data
+    * unmount
+
+
 ## Documentation
 
 See [Documentation](./Docs.md)
