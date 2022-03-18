@@ -4,7 +4,8 @@
 ### Hardware
 * display (Waveshare 3.7inch e_Paper HAT)
 * ESP32 Developement Board
-* Rotary Encoder
+* Rotary Encoder\
+[diagram](./Docs/Hardware.pdf)
 ### Software in C/C++
 * Connecting to wifi via specified credentials in the menuconfig (see documentation)
 * User input => Rotary encoder + Button to switch between modes (day, week, month, year)
@@ -24,31 +25,50 @@
 
 ## Usecase diagram
 
-start_up ________________________________________________________\_\_\_\_ get data \_\_\_\_\_\_\>\_\_\_\_\_\_ graph \_\_\_\_\_\_\_>\_\_\_\_\_\_\_\_ Chosing mode\
-        &emsp;&emsp;&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_<\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\
-        &emsp;&emsp;&emsp;wifi error&emsp;&emsp;server not found&emsp;&emsp;&emsp;&emsp;bad uri&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Or 5 minutes past
+[Usecasediagram](./Docs/UsecaseDiagram.pdf)
 
 ## Function List
 * Draw a graph on the display
-    * Draw y and x axis with information about what is on the axis
+    * Draw y and x-axis with information about what is on the axis
     * Draw Title
     * Draw Draw data
 * Get Data from PHP server
-    * Send request with mode (day, week, month, year)
+    * Send a request with mode (day, week, month, year)
     * Receive data
-    * Convert data to int and store in array
-* Mode select via rotary encoder
+    * Convert data to int and store in an array
+* Mode select via a rotary encoder
     * Read rotary encoder via interrupt
     * change data accordingly
 * Read config from sd card
     * Mount sd card to file system
     * use stdio functions for reading data
     * convert lines to config data
-    * unmount
+    * unmount\
+[function diagram](./Docs/UsecaseDiagram.pdf)
 
+## Tasklist
+* Graph
+    * SPI interface
+    * Low-level system functions for e-paper
+    * High-level functions to draw on the e-paper
+* Config
+    * read sd card
+    * convert string to config data
+* HTTP Request
+    * Connect to WIFI
+    * Create URI
+    * Process HTTP Request
+    * process data
+* Rotary encoder
+    * ISR
+    * Software Deboucing
+    * change mode
+* Data conversion
+    * String splitting on identifier
+    * convert string to int
 
 ## Documentation
 
 See [Documentation](./Docs.md)
 
-The requirement should be more elaborate. How does the user interact with the rotary encoder, what happens, what is displayed. How accurate is the data?
+The requirement should be more elaborate. How does the user interact with the rotary encoder, what happens, what is displayed? How accurate is the data?

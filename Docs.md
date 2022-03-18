@@ -28,12 +28,19 @@ if it can't connect to the server it will give an error on the screen
 5) Press the knob to select the mode and it will change the graph
 
 ## Error's
+### Hard errors
+* SD card not found
+* Config file not found
+* Config rule missing
 * If the device can't connect to the Wifi it will show a message on the screen:\
 ```Cant connect to [SSID]```
 * If the server isn't accesible it will display:\
 ```Can't connect to server [IP]:[PORT]/[URI]```
 * If the URI is faulty it will display:\
 ```Server returned an error while accessing [URI]```
+### Soft errors
+* HTTP request returns not a 200 OK
+* one or more data point are missing
 
 ## Epaper Library
 The library contains 3 sub libraries:\
