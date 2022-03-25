@@ -67,8 +67,9 @@
     * String splitting on identifier
     * convert string to int
 
+## Flow diagram
+[doc](./Docs/Flowdiagram.pdf)
+
 ## Documentation
 
 See [Documentation](./Docs.md)
-
-The requirement should be more elaborate. How does the user interact with the rotary encoder, what happens, what is displayed? How accurate is the data?
