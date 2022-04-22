@@ -7,7 +7,7 @@
 * Rotary Encoder\
 [diagram](./Docs/Hardware.pdf)
 ### Software in C/C++
-* Connecting to wifi via specified credentials in the menuconfig (see documentation)
+* Connecting to wifi via specified credentials in the sd config (see documentation)
 * User input => Rotary encoder + Button to switch between modes (day, week, month, year)
     * A > B (Left): day > year > month > week > day
     * B > A (Right): day > week > month > year > day

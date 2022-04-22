@@ -1,5 +1,10 @@
 # Documentation
 
+## Install espidf
+install vscode\
+(see [link](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html))
+
+
 ## Build tool espidf
 get into env            ```get_idf```\
 set target (set board)  ```ìdf.py set-target esp32```\
