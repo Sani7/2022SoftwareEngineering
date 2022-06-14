@@ -48,10 +48,17 @@ GFX4d gfx = GFX4d();
 
 #define ymax 100
 
-bool redrawGraph = true;
+bool resetNow = false;
+uint16_t tx = 0;
+
 double ox, oy;
+
 char ip[16];
 char URI[20];
+
+unsigned char state, stateBefore = 0; // 0 => Daydata, 1 => Weekdata, 2 => Monthdata, 3 => Yeardata
+unsigned long timeBefore;
+bool redrawNow = true;
 
 bool readSetting(char *fileContent, int contentLength, const char *settingName, char *returnBuff, int returnLength)
 {
@@ -342,9 +349,6 @@ void drawGraph(unsigned char *Data, unsigned char selector, int maximum, bool re
   }
 }
 
-bool resetNow = false;
-uint16_t tx = 0;
-
 unsigned char menuSelecting(unsigned char menuStateBefore)
 {
   gfx.touch_Update();
@@ -410,10 +414,6 @@ void setup()
   }
   gfx.println(F("Connected"));
 }
-
-unsigned char state, stateBefore = 0; // 0 => Daydata, 1 => Weekdata, 2 => Monthdata, 3 => Yeardata
-unsigned long timeBefore;
-bool redrawNow = true;
 
 void loop()
 {
